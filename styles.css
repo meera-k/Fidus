@@ -1,0 +1,41 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin: 5vh 20vh 5vh 20vh;
+}
+h1 {
+    font-size: 30px;
+    font-style: normal;
+}
+#demo-description {
+    color: gray;
+}
+
+form {
+    min-width: 800px;
+    max-width: 1000px;
+    position: relative;
+}
+#image-select-title {
+    background-color: gainsboro;
+    padding: 3vh;
+    border-style: outset;
+    border-color: black;
+    border-bottom-color: unset;
+}
+#image-select {
+    margin-top: -20px;
+    background-color: rgb(231, 229, 229);
+    border-style: outset;
+    border-color: black;
+    padding: 3vh;
+    padding-top: 0vh;
+}
+input {
+    margin-bottom: 20px;
+}
+#image-select-preview {
+    max-width: 80%;
+    margin-right: 3vh;
+    margin-left: 10vh;
+}
