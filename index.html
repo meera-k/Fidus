@@ -48,12 +48,19 @@
             };
 
             $("#init-image").on('change',function(){
-            var selectedFile = this.files[0];
-            selectedFile.convertToBase64(function(base64){
-                console.log(base64);
+            var selectedFile = this.files[0]; //this is the file being converted
+            selectedFile.convertToBase64(function(base64){ 
+                //not sure what this function is doing
+
+
+                var url = base64;
+                console.log(url);
+
             }) 
             });
             
+
+
             
             </script>
 
