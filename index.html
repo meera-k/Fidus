@@ -5,10 +5,10 @@
     <script src="/Users/meerakumar/Desktop/PPE/main.js"></script>
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.357.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <title>PPE Detector</title>
+    <title>Fidus PPE Detection</title>
 </head>
 <body>
-    <h1>Our Product</h1>
+    <h1>Fidus PPE Detection</h1>
     <p id="demo-description">
         Try out our PPE detector by uploading your own image below.
     </p>
@@ -16,15 +16,49 @@
     <form>
         <h2 id="image-select-title">Object detection</h2>
         <div id="image-select">
+
+
             <h3 class="image-select-description">
                 Use your own image
             </h3>
+
+
             <p class="image-select-description">
                 Image must be in <b>jpeg</b> format and be no larger than <b>5MB</b>.
             </p>
-            <input type="file" accept="image/jpeg" onchange="previewFile()">
-            <button type="submit" id="submit" onclick="s3upload()">Submit</button>
+
+
+
+            <!-- <input type="file" accept="image/jpeg" onchange="toDataURL()" id = "init-image"> -->
+
+            <input type="file" accept="image/jpeg" id="init-image">
+            <!-- <button type="submit" id="submit" onclick="s3upload()">Submit</button> -->
             <img id="image-select-preview">
+
+            
+
+
+            <script>
+            File.prototype.convertToBase64 = function(callback){
+                var reader = new FileReader();
+                reader.onloadend = function (e) {
+                    callback(e.target.result, e.target.error);
+                };   
+                reader.readAsDataURL(this);
+            };
+
+            $("#init-image").on('change',function(){
+            var selectedFile = this.files[0];
+            selectedFile.convertToBase64(function(base64){
+                console.log(base64);
+            }) 
+            });
+            
+            
+            </script>
+
+
+
         </div>
     </form>
 </body>
