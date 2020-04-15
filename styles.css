@@ -36,8 +36,8 @@ input {
     margin-bottom: 20px;
 }
 #image-select-preview {
-    opacity:0;
-    max-width: 80%;
+    opacity:;
+    max-width: 150%;
     margin-right: 3vh;
     margin-left: 10vh;
 }
