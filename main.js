@@ -15,6 +15,7 @@ function previewFile() {
 function getResult() {
     var image = document.getElementById("image-select-preview");
     image.src = "https://i.gyazo.com/957c1b7c04a8c542d3845d561c9514ef.png";
+    previewFile();
 }
 
 function getURL() {
