@@ -13,20 +13,21 @@
         Try out our PPE detector by uploading your own image below.
     </p>
 
-    <form action="" onsubmit="getResult()">
+    <form action="">
         <h2 id="image-select-title">Object detection</h2>
         <div id="image-select">
             <h3 class="image-select-description">Use your own image</h3>
             <p class="image-select-description">
                 Image must be in <b>jpeg</b> format and be no larger than <b>5MB</b>.
+                Once uploaded, click on your image to get your result.
             </p>
 
             <input type="file" accept="image/jpeg" id="init-image" onchange="previewFile()" name="file_name">
             <input type="hidden" id="file_name" name="image_url" onsubmit="getURL()">
-            <button type="submit" id="submit">Submit</button>
-            <img id="image-select-preview" src="">
+            <!-- <button type="submit" id="submit">Submit</button> -->
+            <img id="image-select-preview" src="" onclick="getResult(); return false">
 
-            <script>
+            <!-- <script>
                 File.prototype.convertToBase64 = function(callback){
                     var reader = new FileReader();
                     reader.onloadend = function (e) {
@@ -44,7 +45,7 @@
                         console.log(url);
                     }) 
                 });
-            </script>
+            </script> -->
         </div>
     </form>
 </body>
