@@ -26,7 +26,7 @@
             <button type="submit" id="submit">Submit</button>
             <img id="image-select-preview" src="">
 
-            <!-- <script>
+            <script>
                 File.prototype.convertToBase64 = function(callback){
                     var reader = new FileReader();
                     reader.onloadend = function (e) {
@@ -35,6 +35,7 @@
                     reader.readAsDataURL(this);
                 };
 
+            
                 $("#init-image").on('change',function(){
                     var selectedFile = this.files[0]; //this is the file being converted
                     selectedFile.convertToBase64(function(base64){ 
@@ -43,7 +44,7 @@
                         console.log(url);
                     }) 
                 });
-            </script> -->
+            </script>
         </div>
     </form>
 </body>
