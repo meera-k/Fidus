@@ -22,7 +22,7 @@
             <p class="image-select-description">
                 Image must be in <b>jpeg</b> format and be no larger than <b>5MB</b>.
             </p>
-            <input type="file" accept="image/jpeg" onchange="loadFile(event)">
+            <input type="file" accept="image/jpeg" onchange="previewFile()">
             <button type="submit" id="submit" onclick="s3upload()">Submit</button>
             <img id="image-select-preview">
         </div>

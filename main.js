@@ -1,10 +1,16 @@
-var loadFile = function(event) {
-  var output = document.getElementById('image-select-preview');
-  output.src = URL.createObjectURL(event.target.files[0]);
-  output.onload = function() {
-    URL.revokeObjectURL(output.src) // free memory
+function previewFile() {
+  const preview = document.querySelector('img');
+  const file = document.querySelector('input[type=file]').files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener("load", function () { // convert image file to base64 string
+    preview.src = reader.result;
+  }, false);
+  
+  if (file) {
+    reader.readAsDataURL(file);
   }
-};
+}
 
 var bucketName = BUCKET_NAME;
 var bucketRegion = BUCKET_REGION;
